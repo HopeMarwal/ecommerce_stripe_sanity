@@ -64,6 +64,7 @@ export default function Cart() {
           <span className='cart-num-items'>({totalQtys} items)</span>
         </button>
 
+        {/* Empty cart */}
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
@@ -79,9 +80,9 @@ export default function Cart() {
             </Link>
           </div>
         )}
-
+        {/* Cart items */}
         <div className="product-container">
-          {cartItems.length >= 1 && cartItems.map((item, index) => (
+          {cartItems.length >= 1 && cartItems.map((item) => (
             <div className="product" key={item._id}>
 
               <img
@@ -134,6 +135,7 @@ export default function Cart() {
           ))}
         </div>
 
+        {/* Cart total price */}
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
